@@ -110,7 +110,10 @@ form {
 }
 
 #posts{
-  
+  // http://www.quirksmode.org/css/clearing.html
+  overflow: hidden;
+  width: 100%;
+
   .odd .contents {
     background-color: #ffffff;
   }
