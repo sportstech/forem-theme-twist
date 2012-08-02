@@ -8,15 +8,24 @@ $mid-bg1-highlight: #a9a9a9;
 $visited-text: black;
 
 body{
-  font: 12pt Helvetica;
+  font: 12pt "Helvetica Neue", Helvetica;
   color: $default-text;
   margin-left: 20%;
   margin-right: 20%;
-  background: #ddd;
+  background: #fff;
+  line-height: 120%;
 }
 
 a {
   color: #0074FF;
+}
+
+label {
+  display: block;
+}
+
+#forums {
+  border: 1px solid #ddd;
 }
 
 #forums, .topics {
@@ -25,9 +34,9 @@ a {
   }
 
   thead tr th {
-    color: #0096dd;
+    color: white;
     font-family: Helvetica;
-    font-variant:small-caps;
+    font-weight: bold;
   }
 
   tbody td {
@@ -49,18 +58,20 @@ a {
   menu{
     padding-left: 0;
     a{
-      background: white;
+      border: 1px solid #ddd;
+      background: #eee;
       padding: .35em;
       display: inline-block;
       -webkit-border-radius: 5px;
-      color: $default-text;
+      color: #0074FF;
+      font-weight: bold;
       text-decoration: none;
-      font-size: 90%;
-      &:hover{
-        background-color: #333;
-        color: white;
-      }
       margin: 0;
+      &:hover{
+        background-color: #0074FF;
+        color: #eee;
+        border: 1px solid #0258BF;
+      }
     }
   }
 }
@@ -88,7 +99,7 @@ a {
       font-size: .5em;
       text-decoration: none;
       &:hover{
-        background-color: $light-bg1;
+        // background-color: $light-bg1;
       }
     }
   }
@@ -96,9 +107,7 @@ a {
 
 form {
   label {
-    display: block;
     font-size: 80%;
-    padding: 5px;
     abbr {
       display: none;
     }
@@ -107,6 +116,18 @@ form {
     padding: .5em;
     font-size: 110%;
   }
+}
+
+.moderation {
+  clear: both;
+  font-size: .8em;
+  background: #9C0000;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  color: white;
+  width: 90%;
+  font-weight: bold;
+  padding: 5px;
 }
 
 #posts{
@@ -127,15 +148,13 @@ form {
     min-width: 35em;
     min-height: 75px;
     clear: both;
+
     .user{
       float: left;
-      width: 14.7%;
       font-size: .8em;
       min-width: 75px;
       min-height: 100px;
       padding: .5em 1em;
-      background: #232323;
-      color: white;
       .username{
         padding-bottom: .7em;
       }
@@ -143,12 +162,13 @@ form {
         background: transparent url(http://placekitten.com/50/50) no-repeat;
         width: 50px;
         height: 50px;
-        display: inline-block;
+        text-align :right;
+        // display: inline-block;
       }
     }
     .contents{
       min-height: 100px;
-      width: 75%;
+      width: 80%;
       border-left: 1px solid $mid-bg1;
       padding: 1em 1em;
       float: right;
@@ -195,6 +215,7 @@ form {
         font-size: .7em;
         display: inline-block;
       }
+
       &:hover .actions{
       }
       .actions{
@@ -207,15 +228,20 @@ form {
         li{
           a{
             padding: .5em;
-            margin-bottom: .1em;
+            margin-bottom: .4em;
             font-size: .7em;
-            text-align: center;
+            text-align :center;
             display: block;
+            border: 1px solid #ddd;
+            background: #eee;
+            -webkit-border-radius: 5px;
+            color: #0074FF;
+            font-weight: bold;
             text-decoration: none;
-            color: $default-text;
-            background-color: #ddd;
             &:hover{
-              background-color: #ccc;
+              background-color: #0074FF;
+              color: #eee;
+              border: 1px solid #0258BF;
             }
           }
         }
@@ -225,6 +251,8 @@ form {
 }
 
 table.subdued{
+  margin-top: 10px;
+  margin-bottom: 10px;
   width: 100%;
   a{
     text-decoration: none;
@@ -298,4 +326,8 @@ table.subdued{
   height: 15px;
   background: transparent url(/assets/forem/pin_icon.png) 0 0;
   display: inline-block;
+}
+
+#admin_link {
+  text-align: center;
 }

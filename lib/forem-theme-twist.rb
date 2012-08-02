@@ -3,7 +3,7 @@ module Forem
   module Theme
     module Base
       class Engine < Rails::Engine
-        Forem.theme = :base
+        Forem.theme = :twist
       end
     end
   end
