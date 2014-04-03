@@ -7,6 +7,9 @@ $mid-bg1: #ababab;
 $mid-bg1-highlight: #a9a9a9;
 $visited-text: black;
 
+@import "forem/base";
+
+
 body{
   font: 12pt "Helvetica Neue", Helvetica;
   color: $default-text;
